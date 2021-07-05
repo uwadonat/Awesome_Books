@@ -49,8 +49,9 @@ const addToDom = () => {
                 libBooks =  JSON.parse(localStorage.getItem('books'));
                 libBooks.forEach((bookStored) => {
                     if (bookStored.title === bookTitle.textContent) {
+                        myLibrary.splice(myLibrary.indexOf(bookStored), 1);
                         libBooks.splice(libBooks.indexOf(bookStored), 1);
-                      localStorage.setItem('books', JSON.stringify(bookStored));
+                      localStorage.setItem('books', JSON.stringify(libBooks));
                     }
                   });
             }
