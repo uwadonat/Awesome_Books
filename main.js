@@ -3,14 +3,15 @@ const author = document.getElementById('author_input');
 const btn = document.getElementById('submit_btn');
 const showcase = document.getElementById('showcase');
 const mainCont = document.createElement('div');
+
 showcase.appendChild(mainCont);
 let myLibrary = [];
 
 let libBooks = localStorage.getItem('books');
 
-if (libBooks) {
-  myLibrary = JSON.parse(libBooks);
-}
+// if (libBooks) {
+//   myLibrary = JSON.parse(libBooks);
+// }
 
 btn.addEventListener('click', () => {
   const bookObject = {
@@ -22,6 +23,7 @@ btn.addEventListener('click', () => {
   addToDom(); // eslint-disable-line no-use-before-define
   title.value = '';
   author.value = '';
+  
 });
 
 const addToDom = () => {
@@ -51,11 +53,14 @@ const addToDom = () => {
           }
         });
       });
-      bookCont.appendChild(removeBtn);
+     
       bookCont.appendChild(bookTitle);
       bookCont.appendChild(bookAuthor);
+      bookCont.appendChild(removeBtn);
+      
       bookTitle.textContent = book.title;
       bookAuthor.textContent = book.author;
+     
     });
   }
 };
