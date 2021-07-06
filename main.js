@@ -9,16 +9,20 @@ let myLibrary = [];
 
 let libBooks = localStorage.getItem('books');
 
+class bookClass {
+  constructor(title, author) {
+  this.title = title;
+  this.author = author;
+  }
+}
 // if (libBooks) {
 //   myLibrary = JSON.parse(libBooks);
 // }
 
 btn.addEventListener('click', () => {
-  class bookClass {
-    constructor(title, author) {
-    this.title = title.value;
-    this.author = author.value;
-    }
+  let  newBook = new bookClass(title.value, author.value)
+
+  
 };
 
   myLibrary.push(bookClass);
