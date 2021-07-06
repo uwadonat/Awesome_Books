@@ -14,7 +14,15 @@ class bookClass {
   this.title = title;
   this.author = author;
   }
-  
+  add () {
+    
+      myLibrary.push(newBook);
+      localStorage.setItem('books', JSON.stringify(myLibrary));
+      libBooks = localStorage.getItem('books');
+
+  while (mainCont.firstChild) {
+    mainCont.removeChild(mainCont.firstChild);
+  }
 
   if (libBooks) {
     // eslint-disable-next-line no-undef, array-callback-return
