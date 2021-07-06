@@ -14,10 +14,12 @@ let libBooks = localStorage.getItem('books');
 // }
 
 btn.addEventListener('click', () => {
-  const bookObject = {
-    title: title.value,
-    author: author.value,
-  };
+  class bookClass {
+    constructor(title, author) {
+    this.title = title.value;
+    this.author = author.value;
+    }
+};
   myLibrary.push(bookObject);
   localStorage.setItem('books', JSON.stringify(myLibrary));
   addToDom(); // eslint-disable-line no-use-before-define
