@@ -20,7 +20,9 @@ btn.addEventListener('click', () => {
     this.author = author.value;
     }
 };
-  myLibrary.push(bookObject);
+
+  myLibrary.push(bookClass);
+  
   localStorage.setItem('books', JSON.stringify(myLibrary));
   addToDom(); // eslint-disable-line no-use-before-define
   title.value = '';
