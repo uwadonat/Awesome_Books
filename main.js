@@ -14,25 +14,27 @@ class bookClass {
   this.title = title;
   this.author = author;
   }
+  add () {
+    
+      myLibrary.push(newBook);
+      localStorage.setItem('books', JSON.stringify(myLibrary));
+      addToDom(); // eslint-disable-line no-use-before-define
+      title.value = '';
+      author.value = '';
+        
+  
+  }
 }
+let  newBook = new bookClass(title.value, author.value)
+btn.addEventListener('click',() => {
+  newBook.add();
+})
 // if (libBooks) {
 //   myLibrary = JSON.parse(libBooks);
 // }
 
-btn.addEventListener('click', () => {
-  let  newBook = new bookClass(title.value, author.value)
 
-  
-};
 
-  myLibrary.push(bookClass);
-  
-  localStorage.setItem('books', JSON.stringify(myLibrary));
-  addToDom(); // eslint-disable-line no-use-before-define
-  title.value = '';
-  author.value = '';
-  
-});
 
 const addToDom = () => {
   libBooks = localStorage.getItem('books');
@@ -66,11 +68,10 @@ const addToDom = () => {
       bookCont.appendChild(bookAuthor);
       bookCont.appendChild(removeBtn);
       
-      bookTitle.textContent = book.title;
-      bookAuthor.textContent = book.author;
+      bookTitle.textContent = newBook.title;
+      bookAuthor.textContent = newBook.author;
      
     });
   }
 };
 
-addToDom();
