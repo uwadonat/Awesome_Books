@@ -12,7 +12,7 @@ class Book {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 
-  removeBook() {
+  removeLibBook() {
     myLibrary.splice(myLibrary.indexOf(bookStored), 1); // eslint-disable-line
     libBooks.splice(libBooks.indexOf(bookStored), 1); // eslint-disable-line
     window.location.reload();
@@ -37,7 +37,7 @@ if (Book.length === 0) {
   myLibrary = JSON.parse(libBooks);
 }
 
-btn.addEventListener('click',() => {
+btn.addEventListener('click', () => {
   const bookObject = {
     title: title.value,
     author: author.value,
