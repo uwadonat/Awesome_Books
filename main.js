@@ -1,3 +1,25 @@
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+
+  addToLib() {
+    const bookStored = new Book(this.title, this.author);
+    if (this.length !== 0) {
+      this.push(bookStored);
+    }
+    localStorage.setItem('books', JSON.stringify(this.books));
+  }
+
+  removeLibBook() {
+    myLibrary.splice(myLibrary.indexOf(bookStored), 1); // eslint-disable-line
+    libBooks.splice(libBooks.indexOf(bookStored), 1); // eslint-disable-line
+    window.location.reload();
+    localStorage.setItem('books', JSON.stringify(this.books));
+  }
+}
+
 const title = document.getElementById('title_input');
 const author = document.getElementById('author_input');
 const btn = document.getElementById('submit_btn');
@@ -9,6 +31,9 @@ let myLibrary = [];
 let libBooks = localStorage.getItem('books');
 
 if (libBooks) {
+  myLibrary = JSON.parse(libBooks);
+}
+if (Book.length === 0) {
   myLibrary = JSON.parse(libBooks);
 }
 
