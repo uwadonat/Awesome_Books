@@ -20,8 +20,8 @@
 - Linkedin: [Mert Gunduz](https://www.linkedin.com/in/mert-gunduz-875280202/)
 
 👤 **Donat UWAMAHORO**
-- Github: [@mgunduz1](https://github.com/mgunduz1)
-- Linkedin: [Mert Gunduz](https://www.linkedin.com/in/mert-gunduz-875280202/)
+- Github: [@uwadonat](https://github.com/uwadonat)
+- Linkedin: [Donat UWAMAHORO](https://www.linkedin.com/in/uwadonat/)
 
 
 ## Acknowledgements
