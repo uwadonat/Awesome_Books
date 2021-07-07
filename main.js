@@ -37,7 +37,7 @@ if (Book.length === 0) {
   myLibrary = JSON.parse(libBooks);
 }
 
-btn.addEventListener('click', () => {
+btn.addEventListener('click',() => {
   const bookObject = {
     title: title.value,
     author: author.value,
