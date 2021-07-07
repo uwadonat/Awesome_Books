@@ -24,7 +24,7 @@ const title = document.getElementById('title_input');
 const author = document.getElementById('author_input');
 const btn = document.getElementById('submit_btn');
 const showcase = document.getElementById('showcase');
-const mainCont = document.createElement('div');
+const mainCont = document.createElement('tbody');
 showcase.appendChild(mainCont);
 let myLibrary = [];
 
@@ -59,10 +59,10 @@ const addToDom = () => {
   if (libBooks) {
     // eslint-disable-next-line no-undef, array-callback-return
     books = JSON.parse(libBooks).map((book) => {
-      const bookCont = document.createElement('div');
+      const bookCont = document.createElement('tr');
       mainCont.appendChild(bookCont);
-      const bookTitle = document.createElement('p');
-      const bookAuthor = document.createElement('p');
+      const bookTitle = document.createElement('td');
+      const bookAuthor = document.createElement('td');
       const removeBtn = document.createElement('button');
       removeBtn.textContent = 'Delete';
       removeBtn.addEventListener('click', () => {
@@ -76,9 +76,9 @@ const addToDom = () => {
           }
         });
       });
-      bookCont.appendChild(removeBtn);
       bookCont.appendChild(bookTitle);
       bookCont.appendChild(bookAuthor);
+      bookCont.appendChild(removeBtn);
       bookTitle.textContent = book.title;
       bookAuthor.textContent = book.author;
     });
