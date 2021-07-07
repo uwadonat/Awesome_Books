@@ -1,14 +1,19 @@
 # Awesome_Books
+
 > This is the first collaborative project in the Javascript module. It is the implementation of "Objects" and the "class"
+
 
 ## Built With
 - HTML5
 - Javascript
 - Linters
 
+
 ## Live Demo
 
 [Live Demo Link](https://uwadonat.github.io/Awesome_Books/)
+
+
 
 ## Clone This Project
 ```
