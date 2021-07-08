@@ -21,8 +21,8 @@
     <table class="table text-center table-sm table-borderless table-striped" id="showcase" style="width: 40%; margin: auto auto; ">
         <thead>
 
-    <h3 class="text-center"><strong>here is a list of all Books in Library</strong></h3>
-    <hr class="lineabovelist">
+
+    <h2 class="mainheading text-center"><strong>Here is a list of all Books in Library</strong></h2>
           <tr>
             <th scope="col">Title</th>
             <th scope="col">Author</th>
@@ -34,8 +34,11 @@
 <br>
 
         <div class="addnewbookform container-sm mt-4 d-none">
+          <p id="cong"></p>
+<p class="text-center"><img id="image" src="./images/cong.gif" class="d-none"></p>
             <div class="row justify-content-center">
             <div class="col-4 d-flex justify-content-center flex-column">
+              
                 <h3 class="text-center">Add a New Book</h3>
         <input type="text" id="title_input" placeholder="Title"><br>
         <input type="text" id="author_input" placeholder="Author"><br>
@@ -44,8 +47,15 @@
     </div>
     </div>
 
-    <div class="contactdiv d-none">
-     <p id="time">DateTime.local()</p>
+    <div class="d-flex justify-content-center contactdiv d-none text-center mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="./images/book.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><pre>Awesome Books</pre></h5>
+          <p class="card-text">For more Information or any comment, contact us on our social media.</p>
+          <a href="https://www.linkedin.com/in/uwadonat/" target="_blank" class="btn btn-primary">linkedIn</a>
+        </div>
+      </div>
     </div>
     <footer class="container-fluid mt-6">
       <div class="text-center py-2  " style="background-color: rgba(0, 0, 0, 0.2);">
