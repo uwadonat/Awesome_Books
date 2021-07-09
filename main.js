@@ -81,11 +81,15 @@ contact.addEventListener("click",() => {
   addnewbookform.classList.add("d-none");
   contactdiv.classList.remove("d-none");
   mainheading.classList.add("d-none")
- 
-  const time = document.getElementById("time")
   
 })
 
+const DateTime = luxon.DateTime;
+const showDT = document.getElementById("show-date");
+const localTime = DateTime.now();
+
+
+showDT.textContent = localTime.toLocaleString(DateTime.DATETIME_FULL);
 
 
 //main content
