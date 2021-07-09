@@ -20,6 +20,68 @@ class Book {
   }
 }
 
+// navigation bar
+const navbardiv = document.getElementById('navbardiv');
+const navbar = document.createElement('div');
+navbardiv.appendChild(navbar);
+const logo = document.createElement('div');
+const navitems = document.createElement('div');
+navbar.appendChild(logo);
+navbar.appendChild(navitems);
+const logotitle = document.createElement('h1');
+logotitle.innerText = 'Awesome Books';
+logo.appendChild(logotitle);
+const listofbooks = document.createElement('h5');
+const addnewbook = document.createElement('h5');
+const contact = document.createElement('h5');
+navitems.appendChild(listofbooks);
+navitems.appendChild(addnewbook);
+navitems.appendChild(contact);
+listofbooks.innerText = 'List';
+addnewbook.innerText = 'Add new';
+contact.innerText = 'Contact';
+logotitle.classList.add('logotitleclass');
+navbar.classList.add('navbarclass1');
+navitems.classList.add('navitemsclass1');
+listofbooks.classList.add('navitemclass');
+addnewbook.classList.add('navitemclass');
+contact.classList.add('navitemclass');
+
+// navigation events
+const list = document.querySelector('.table');
+const mainheading = document.querySelector('.mainheading');
+const addnewbookform = document.querySelector('.addnewbookform');
+const contactdiv = document.querySelector('.contactdiv');
+const wau = document.getElementById('image');
+addnewbook.addEventListener('click', () => {
+  list.classList.add('d-none');
+  addnewbookform.classList.remove('d-none');
+  mainheading.classList.add('d-none');
+  contactdiv.classList.add('d-none');
+});
+
+listofbooks.addEventListener('click', () => {
+  list.classList.remove('d-none');
+
+  addnewbookform.classList.add('d-none');
+  contactdiv.classList.add('d-none');
+});
+
+contact.addEventListener('click', () => {
+  list.classList.add('d-none');
+  addnewbookform.classList.add('d-none');
+  contactdiv.classList.remove('d-none');
+  mainheading.classList.add('d-none');
+});
+
+const { DateTime } = luxon; // eslint-disable-line no-undef
+const showDT = document.getElementById('show-date');
+const localTime = DateTime.now();
+
+showDT.textContent = localTime.toLocaleString(DateTime.DATETIME_FULL);
+
+// main content
+
 const title = document.getElementById('title_input');
 const author = document.getElementById('author_input');
 const btn = document.getElementById('submit_btn');
@@ -47,6 +109,10 @@ btn.addEventListener('click', () => {
   addToDom(); // eslint-disable-line no-use-before-define
   title.value = '';
   author.value = '';
+  const cong = document.getElementById('cong');
+  cong.classList.add('text-center', 'text-primary');
+  cong.innerText = 'Congratulation,your book have been added to the Library!!';
+  wau.classList.remove('d-none');
 });
 
 const addToDom = () => {
